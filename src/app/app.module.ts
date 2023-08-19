@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TodoHandlerComponent } from './todo-handler/todo-handler.component';
 import { AddTodosComponent } from './add-todos/add-todos.component';
+import { FormsModule } from '@angular/forms';
+import { CheckedTodosComponent } from './checked-todos/checked-todos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     TodoHandlerComponent,
-    AddTodosComponent
+    AddTodosComponent,
+    CheckedTodosComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

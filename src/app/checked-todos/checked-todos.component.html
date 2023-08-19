@@ -1,0 +1,18 @@
+<div *ngIf="todoList != []; else noTodos">
+    <div class="d-flex flex-row flex-wrap">
+        <div *ngFor="let todo of todoList">
+            <div class="card mx-3 my-3" style="width: 18rem;" *ngIf="!todo.active">
+                <div class="card-body">
+                    <h5 class="card-title">{{todo.title}}</h5>
+                    <p class="card-text">{{todo.description}}</p>
+                    <h4>Task Completed</h4>
+                    <button type="button" ngClass="btn btn-danger btn-sm" (click)="deleteItem(todo)">Delete
+                        Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #noTodos>
+    <h3>No Todos Checked</h3>
+</ng-template>
